@@ -139,9 +139,12 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>NPOI.Core</AssemblyReference>
       <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="897.2,6619.199999999999" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1457.2000000000003,6619.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="invoiceFolder" />
       <Variable x:TypeArguments="s:String[]" Name="invoiceFiles" />
@@ -387,7 +390,7 @@
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="reportPath">
                   <Variable.Default>
-                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Path.Combine(&quot;Reports&quot;,&quot;Invoice_Report.xlsx&quot;)" />
+                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Path.Combine(&quot;Reports&quot;,&quot;Invoice_Report_&quot;+ Now.ToString(&quot;yyyyMMdd_HHmm&quot;) + &quot;.xlsx&quot;)" />
                   </Variable.Default>
                 </Variable>
               </Sequence.Variables>
